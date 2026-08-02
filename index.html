@@ -1,62 +1,189 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./css/style.css">
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">  
-  <title>Tech Book Club Lamding Page | Frontend Mentor</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Frontend Mentor Tech Book Club Lamding Page solution built with semantic HTML 
+            and CSS. Responsive design featuring Flexbox, Grid and fluid typography.">        
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">  
+    <title>Tech Book Club Landing Page | Frontend Mentor</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&family=Martian+Mono&display=swap" rel="stylesheet">
 </head>
 <body>
     <main class="container">
-        <p>Join the ultimate tech book club
-            Turn your reading time into learning time with fellow tech enthusiasts. 
-            Get curated recommendations, join vibrant discussions, and level up your 
-            skills one chapter at a time.
-            Review membership options
-            200+ developers joined already
-            Read together, grow together
-            Monthly curated tech reads selected by industry experts
-            Virtual and in-person meetups for deep-dive discussions
-            Early access to new tech book releases
-            Author Q&A sessions with tech thought leaders
-            Not your average book club
-            Connect with a community that speaks your language - from Python to TypeScript and 
-            everything in between. Our discussions blend technical depth with practical applications.
-            Your tech reading journey
-            1
-            Choose your membership tier
-            2
-            Get your monthly book selection
-            3
-            Join our discussion forums
-            4
-            Attend exclusive meetups
-            Membership options
-            Starter
-            $19/month
-            1 book/month
-            Online forums
-            Subscribe now
-            Pro
-            $29/month
-            2 books/month
-            Virtual meetups
-            Subscribe now
-            Enterprise
-            Custom
-            Team access
-            Private sessions
-            Talk to us
-            "This book club transformed my technical reading from a solitary 
-            activity into an enriching community experience. The discussions 
-            are gold!"
-            Sarah Chen, Software Architect
-            Ready to debug your reading list?
-            Review membership options
-            200+ developers joined already
-            © 2024 - Tech Book Club
-        </p>
+        <header>
+           <a href="#" class="logo"><img src="./images/logo.svg" alt="Tech Book Club Logo"></a>    
+           <div>
+                <h1>Join the ultimate tech book club</h1>
+                <p>Turn your reading time into learning time with fellow tech enthusiasts.Get curated recommendations, 
+                    join vibrant discussions, and level up your skills one chapter at a time.</p>
+                <a href="#" class="btn">Review membership options <img src="images/icon-arrow-down.svg" alt=""></a>
+                <div> 
+                    <p><img src="./images/image-avatars.webp" alt=""></p>
+                    <div>
+                        <p aria-label="5 out of 5 stars">
+                        <img src="./images/icon-star.svg" alt="">
+                        <img src="./images/icon-star.svg" alt="">
+                        <img src="./images/icon-star.svg" alt="">
+                        <img src="./images/icon-star.svg" alt="">
+                        <img src="./images/icon-star.svg" alt="">
+                        </p>
+                        <p>200+ developers joined already</p> 
+                    </div>              
+                </div>
+           </div>
+           <picture>
+                <!-- Desktop -->
+                <source
+                    media="(min-width: 68.75rem)"
+                    srcset="./images/image-hero-desktop.webp">
+
+                <!-- Tablet -->
+                <source
+                    media="(min-width: 48rem)"
+                    srcset="./images/image-hero-tablet.webp">
+
+                <!-- Mobile (fallback) -->
+                <img
+                    src="./images/image-hero-mobile.webp"
+                    alt="Description of the image">
+            </picture>
+        </header>
+        <section>
+            <h2>Read together, grow together</h2>
+            <ul>
+                <li><img src="images/icon-check.svg" alt=""> Monthly curated tech reads selected by industry experts</li>
+                <li><img src="images/icon-check.svg" alt=""> Virtual and in-person meetups for deep-dive discussions</li>
+                <li><img src="images/icon-check.svg" alt=""> Early access to new tech book releases</li>
+                <li><img src="images/icon-check.svg" alt=""> Author Q&A sessions with tech thought leaders</li>
+            </ul>
+            <picture>
+                <!-- Desktop -->
+                <source
+                    media="(min-width: 68.75rem)"
+                    srcset="./images/image-read-together-desktop.webp">
+
+                <!-- Tablet -->
+                <source
+                    media="(min-width: 48rem)"
+                    srcset="./images/image-read-together-tablet.webp">
+
+                <!-- Mobile (fallback) -->
+                <img
+                    src="./images/image-read-together-mobile.webp"
+                    alt="Description of the image">
+            </picture>
+        </section>
+        <section>
+            <h2>Not your average book <img src="images/pattern-circle.png" alt="" aria-hidden="true"> club</h2>
+            <p>Connect with a community that speaks your language - from Python to TypeScript and 
+            everything in between. Our discussions blend technical depth with practical applications.</p>
+            <picture>
+                <!-- Desktop -->
+                <source
+                    media="(min-width: 68.75rem)"
+                    srcset="./images/image-not-average-desktop.webp">
+
+                <!-- Tablet -->
+                <source
+                    media="(min-width: 48rem)"
+                    srcset="./images/image-not-average-tablet.webp">
+
+                <!-- Mobile (fallback) -->
+                <img
+                    src="./images/image-not-average-mobile.webp"
+                    alt="Description of the image">
+            </picture>
+        </section>
+        <section>
+            <h2>Your tech reading journey</h2>
+            <ul>
+                <li>
+                    <h3>1</h3>
+                    <p>Choose your membership tier</p>
+                </li>
+                <li>
+                    <h3>2</h3>
+                    <p>Get your monthly book selection</p>
+                </li>
+                <li>
+                    <h3>3</h3>
+                    <p>Join our discussion forums</p>
+                </li>
+                <li>
+                    <h3>4</h3>
+                    <p>Attend exclusive meetups</p>
+                </li>
+            </ul>
+        </section>
+        <section>
+            <div>
+                <h2>Membership options</h2>
+                <article>             
+                    <h3>Starter</h3>
+                    <p>$19/month</p>
+                    <hr>
+                    <p><img src="./images/icon-check.svg" alt="Check icon">1 book/month</p>
+                    <p><img src="./images/icon-check.svg" alt="Check icon">Online forums</p>
+                    <a href="#">Subscribe now</a>
+                </article>
+                <article>
+                    <h3>Pro</h3>
+                    <p>$29/month</p>
+                    <hr>
+                    <p><img src="./images/icon-check.svg" alt="Check icon">2 books/month</p>
+                    <p><img src="./images/icon-check.svg" alt="Check icon">Virtual meetups</p>
+                    <a href="#">Subscribe now</a>
+                </article>
+                <article>
+                    <h3>Enterprise</h3>
+                    <p>Custom</p>
+                    <hr>
+                    <p><img src="./images/icon-check.svg" alt="Check icon">Team access</p>
+                    <p><img src="./images/icon-check.svg" alt="Check icon">Private sessions</p>
+                    <a href="#">Talk to us</a>
+                </article>
+            </div>   
+        </section>
+        <section>
+            <p><img src="./images/icon-star.svg" alt="">
+                    <img src="./images/icon-star.svg" alt="">
+                    <img src="./images/icon-star.svg" alt="">
+                    <img src="./images/icon-star.svg" alt="">
+                    <img src="./images/icon-star.svg" alt="">
+            </p>
+            <blockquote>"This book club transformed my technical reading from a solitary 
+                activity into an enriching community experience. The discussions 
+                are gold!"</blockquote>
+            <p>Sarah Chen, Software Architect</p>
+        </section>
+        <footer>
+            <h2>Ready to debug your reading list?</h2>
+            <a href="">Review membership options <img src="./images/icon-arrow-up.svg" alt="Arrow icon"></a>
+            <div> 
+                <p><img src="./images/image-avatars.webp" alt=""></p>
+                <div>
+                    <p aria-label="5 out of 5 stars">
+                    <img src="./images/icon-star.svg" alt="">
+                    <img src="./images/icon-star.svg" alt="">
+                    <img src="./images/icon-star.svg" alt="">
+                    <img src="./images/icon-star.svg" alt="">
+                    <img src="./images/icon-star.svg" alt="">
+                    </p>
+                    <p>200+ developers joined already</p> 
+                </div>              
+            </div>
+           <hr>
+           <div>
+            <p>© 2024 - Tech Book Club</p>
+            <p>
+                <a href="#" aria-label="Bluesky"><img src="./images/logo-bluesky.svg" alt="Bluesky"></a>
+                <a href="#" aria-label="LinkedIn"><img src="./images/logo-linkedin.svg" alt="LinkedIn"></a>
+            </p>
+           </div>           
+        </footer>
     </main> 
 </body>
 </html>
