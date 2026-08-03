@@ -203,3 +203,42 @@ body {
     border-radius: 0.32rem;
     max-width: 21.44rem;
 }
+
+/* READ SECTION */
+.read-section{
+    margin-block-start: var(--spacing-800);
+    padding-inline: var(--spacing-200);
+}
+.read-heading{
+    font-size: 2.13rem;
+    font-family: var(--font-family-martian-mono);
+    font-weight: var(--font-weight-semiBold);
+    line-height: 1.3;
+    letter-spacing: -0.13rem;    
+    color: var(--neutral-900);
+}
+.feature-list{
+    margin-block-start: var(--spacing-300);
+    list-style: none;
+    color: var(--neutral-700);
+}
+
+.list-item{
+    display: flex;
+    align-items: center;
+    margin-block-end: var(--spacing-200);
+    font-size: var(--font-size-20);
+    gap: 0.88rem
+}
+.check-img{
+    max-width: 1.75rem;
+    max-height: 1.75rem;
+}
+.read-image-section{
+    margin-block-start: var(--spacing-500);
+    border: 1px solid var(--neutral-900);
+}
+.read-together-img{
+    border-radius: 0.77rem;
+    max-width: 21.44rem;
+}
