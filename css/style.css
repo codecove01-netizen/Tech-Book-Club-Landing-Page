@@ -222,7 +222,6 @@ body {
     list-style: none;
     color: var(--neutral-700);
 }
-
 .list-item{
     display: flex;
     align-items: center;
@@ -235,10 +234,11 @@ body {
     max-height: 1.75rem;
 }
 .read-image-section{
+    display: block;
     margin-block-start: var(--spacing-500);
-    border: 1px solid var(--neutral-900);
 }
 .read-together-img{
     border-radius: 0.77rem;
     max-width: 21.44rem;
 }
+
