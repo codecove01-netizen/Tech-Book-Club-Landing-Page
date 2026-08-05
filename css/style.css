@@ -158,7 +158,6 @@ body {
     max-width: 21.44rem;
     background-color: var(--light-salmon-50);
 }
-
 .testimonial-section{
     margin-block-start: var(--spacing-250);
     display: flex;
@@ -357,13 +356,19 @@ body {
     line-height: 1.3;
     letter-spacing: -0.13rem;
 }
-.option-card{
-    margin-block: var(--spacing-300) var(--spacing-400);
+.option-card,
+.last-option-card{
     width: 100%;
     max-width: 21.25rem;
     border: 1px solid var(--neutral-200);
     border-radius: 0.5rem;
     padding: var(--spacing-300);
+}
+.option-card{
+    margin-block: var(--spacing-300) var(--spacing-400);
+}
+.last-option-card{
+    margin-block-start: var(--spacing-300);
 }
 .card-title{
     font-size: 1.5rem;
@@ -454,3 +459,4 @@ body {
         cover;
     background-color: var(--neutral-100);
 }
+
