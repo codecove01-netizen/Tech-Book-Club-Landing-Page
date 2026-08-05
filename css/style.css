@@ -460,3 +460,35 @@ body {
     background-color: var(--neutral-100);
 }
 
+/* TESTIMONIAL QUOTE SECTION */
+.testimonial-container{
+    margin-block-start: var(--spacing-800);
+    width: 100%;
+    max-width: 23.44rem;
+    padding-inline: var(--spacing-200);
+}
+.star-block{
+    display: flex;
+    flex-direction: row;
+    row-gap: 0.38rem;
+}
+.star-img{
+    width: 1.75rem;
+    height: 1.75rem;    
+}
+.testimonial-quote{
+    margin-block-start: var(--spacing-400);
+    font-size: 1.5rem;
+    font-family: var(--font-family-martian-mono);
+    font-weight: var(--font-weight-semiBold);
+    line-height: 1.1;
+    letter-spacing: -0.06rem;
+    color: var(--neutral-900);
+}
+.author{
+    margin-block-start: var(--spacing-400);
+    font-size: var(--font-size-20);
+    line-height: 1.4;
+    letter-spacing: -0.03rem;
+    color: var(--neutral-700);
+}
