@@ -49,20 +49,151 @@ img {
     --neutral-0: #FFFFFF;
     --neutral-100: #FAF5F3;
     --neutral-200: #E6E1DF;
-    --light-salmon-50: #FFF5EF;
-    --light-salmon-100:#FFE2D1;
-    --light-salmon-500: #FEA36F; 
     --neutral-500: #4E4A42;
     --neutral-900: #062630;
     --neutral-700: #385159;
+    --light-salmon-50: #FFF5EF;
+    --light-salmon-100:#FFE2D1;
+    --light-salmon-500: #FEA36F; 
     --linear-gradient: linear-gradient(90deg, var(--light-salmon-500) 0%, var(--neutral-500) 71%, var(--neutral-900) 100%);
     --linear-gradient-hover: linear-gradient(90deg, var(--light-salmon-100) 0%, var(--light-salmon-50) 100%);
 
     /* FONT WEIGHTS */
-    --font-weight-bold: 700;
-    --font-weight-semiBold: 600;
+    --font-weight-700: 700;
+    --font-weight-600: 600;
 
 }
+
+/* ===================================================
+            TYPOGRAPHY
+======================================================= */
+
+ /* Section Headings */
+.read-heading,.not-average-heading,
+.membership-title,.footer-heading
+{   
+    font-family: var(--font-family-martian-mono);
+    font-weight: var(--font-weight-600);
+    line-height: 1.3;
+	font-size: 2.13rem;
+    letter-spacing: -0.13rem;
+}
+
+/* Reading Journey */
+.reading-heading,.steps-container{
+    font-family: var(--font-family-martian-mono);
+    font-weight: var(--font-weight-600);
+    line-height: 1.3;
+}
+
+/*  Card Headings & Quote */
+.card-title, .testimonial-quote{
+    font-family: var(--font-family-martian-mono);
+    font-weight: var(--font-weight-600);
+    letter-spacing: -0.06rem;
+} 
+
+/* Pricing */
+.price-container, .custom{
+    letter-spacing: -0.06rem;
+    font-family: var(--font-family-martian-mono);
+    font-weight: var(--font-weight-600);
+    line-height: 1.3;
+	font-size: 2.13rem;
+}
+
+/* Body Text */
+.hero-description, .not-average-description, .per-month,
+.feature-text, .author{
+    color: var(--neutral-700);
+    font-size: var(--font-size-20);
+    line-height: 1.4;
+    letter-spacing: -0.03rem;
+}
+
+/* Small Text */
+.testimonial-numbers, .footer-testimonial-numbers,
+.footer-text{
+    font-size: 0.88rem;    
+    line-height: 1.2;
+	letter-spacing: -0.03rem;
+}
+
+/* Buttons */
+.review-btn, .subscribe-now-button, .review-button{
+	letter-spacing: -0.06rem;
+    line-height: 1.3;
+    font-family: var(--font-family-martian-mono);
+    font-weight: var(--font-weight-600);
+}
+
+
+/* ===================================================
+   SHARED LAYOUT
+=================================================== */
+
+/* ----------- Shared Widths ----------- */
+.hero-container, .review-btn, .testimonial-section,
+.footer-testimonial-section, .not-average-section, .reading-journey-section,
+.membership-section, .review-button{
+    width: 100%;
+    max-width: 21.44rem;    
+}
+
+/* ----------- Flex Layout ------------ */
+
+/* Flex Column */
+.container,.hero-section,.rating-container{
+    display:flex;
+    flex-direction: column;
+}
+
+/* Flex Row */
+.testimonial-section,.footer-testimonial-section,
+.star-container,.list-item,.price-container,.feature-item,
+.star-block, .social-media-container{
+	display:flex;
+}
+
+/* ------- Background Patterns -------- */
+.hero-section, .reading-journey-section, .pro-card{
+    background-image:
+        url("../images/pattern-glow.svg"),
+        url("../images/pattern-light-bg.svg");
+    background-repeat: no-repeat;
+    background-size:
+        auto,
+        cover;
+    background-color: var(--neutral-100);
+}
+
+
+/* ---------- SHARED SPACING  ---------- */
+
+/* Spacing 300 */
+.footer-testimonial-section, .feature-list,
+.not-average-description, .last-option-card, .price-container,
+.custom, .divider, .feature-container,
+.subscribe-now-button
+{
+    margin-block-start: var(--spacing-300);
+}
+
+/* Spacing 400 */
+.hero-description, .review-btn, .steps-container,
+.testimonial-quote, .author
+{
+    margin-block-start: var(--spacing-400);    
+}
+
+/* Spacing 800 */
+.hero-image-section, .read-section, .not-average-section,
+.reading-journey-section, .reading-heading, .membership-container,
+.testimonial-container, .footer-container, .footer-content
+{
+    margin-block-start: var(--spacing-800);    
+}
+
 
 /* ===================================================
             GLOBAL LAYOUT
@@ -75,102 +206,67 @@ body {
     flex-direction: column;
     justify-content: center;
     min-height: 100vh;
+    color: var(--neutral-900);
 }
 
 /* ===================================================
             MAIN CONTAINER
 ======================================================= */
-.container {
-    display: flex;
-    flex-direction: column;
+.container{
     justify-content: center;
     align-items: center;    
 }
 
 /* HERO SECTION */
-.hero-section {
-    display: flex;
-    flex-direction: column;
+.hero-section{
     justify-content: flex-start;
     align-items: left;
     padding-block: var(--spacing-400) var(--spacing-1000);
-     background-image:
-        url("../images/pattern-glow.svg"),
-        url("../images/pattern-light-bg.svg");
-    background-repeat: no-repeat;
     background-position:
         left 2rem top 40rem,
         center;
-    background-size:
-        auto,
-        cover;
-    background-color: var(--neutral-100);
     padding-inline: var(--spacing-200);    
 }
 
 .hero-container{
     margin-block-start: var(--spacing-600);
-    width: 100%;
-    max-width: 21.44rem;
 }
 .hero-heading{
     display: inline-block;
-
     font-family: var(--font-family-martian-mono);
     font-size: var(--font-size-heading-lg);
-    font-weight: var(--font-weight-bold);
+    font-weight: var(--font-weight-700);
     line-height: 1.2;
-    letter-spacing: -0.13rem;
-
     background: var(--linear-gradient);
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
-    -webkit-text-fill-color: transparent;
-    
+    -webkit-text-fill-color: transparent;    
+    letter-spacing: -0.13rem;
     /* Outline */
     -webkit-text-stroke: 1px rgba(0, 0, 0, 0.2);
 }
-
-.hero-description{
-    color: var(--neutral-700);
-    font-size: var(--font-size-20);
-    line-height: 1.4;
-    margin-block-start: var(--spacing-400);
-    letter-spacing: -0.03rem;
-}
+.review-button,
 .review-btn{
-    text-decoration: none;
-    margin-block-start: var(--spacing-400);
-    display: inline-flex;
+	display: inline-flex;
     align-items: center;
+	text-transform: uppercase;
+	gap: var(--spacing-200);  
+	text-decoration: none;
     padding: var(--spacing-300) var(--spacing-250);
-    border:1px solid var(--neutral-900);
-    text-transform: uppercase;
-    border-radius: var(--spacing-100);
-    gap: var(--spacing-200);
     color: var(--neutral-900);
-    font-family: var(--font-family-martian-mono);
-    line-height: 1.3;
-    letter-spacing: -0.06rem;
-    font-weight: var(--font-weight-semiBold);
-    width:100%;
-    max-width: 21.44rem;
+}
+.review-btn{    
+    border:1px solid var(--neutral-900);    
+    border-radius: var(--spacing-100);      
     background-color: var(--light-salmon-50);
 }
 .testimonial-section,
 .footer-testimonial-section{    
-    display: flex;
-    flex-direction: row;
-    width:100%;
-    max-width: 21.44rem;
     gap:var(--spacing-150);
 }
 .testimonial-section{
     margin-block-start: var(--spacing-250);
-}
-.footer-testimonial-section{
-    margin-block-start: var(--spacing-300);
 }
 .profile-images{
     width: 100%;
@@ -179,12 +275,9 @@ body {
 .rating-container{   
    width: 100%;
    max-width: 13.81rem;
-   display: flex;
-   flex-direction: column;
    gap: 0.25rem;
 }
 .star-container{
-    display: flex;  
     width: 100%;
     max-width: 7.5rem;          
 }
@@ -196,10 +289,7 @@ body {
 }
 .testimonial-numbers,
 .footer-testimonial-numbers{
-    font-size: 0.88rem;    
-    line-height: 1.2;
-    letter-spacing: -0.03rem;
-    font-family: var(--font-famiy-martian-mono);
+    font-family: var(--font-family-martian-mono);
     text-align: left;
 }
 .testimonial-numbers{
@@ -208,9 +298,7 @@ body {
 .footer-testimonial-numbers{
     color: var(--neutral-0);
 }
-.hero-image-section{
-    margin-block-start: var(--spacing-800);    
-}
+
 .hero-image{
     border-radius: 0.32rem;
     max-width: 21.44rem;
@@ -218,27 +306,18 @@ body {
 
 /* READ SECTION */
 .read-section{
-    margin-block-start: var(--spacing-800);
     padding-inline: var(--spacing-200);
     max-width: 23.44rem;
     align-items: left;
 }
 .read-heading{
-    font-size: 2.13rem;
-    font-family: var(--font-family-martian-mono);
-    font-weight: var(--font-weight-semiBold);
-    line-height: 1.3;
-    letter-spacing: -0.13rem;    
-    color: var(--neutral-900);
     align-items: left;
 }
 .feature-list{
-    margin-block-start: var(--spacing-300);
     list-style: none;
     color: var(--neutral-700);
 }
 .list-item{
-    display: flex;
     align-items: center;
     margin-block-end: var(--spacing-200);
     font-size: var(--font-size-20);
@@ -257,19 +336,6 @@ body {
 }
 
 /* NOT AVERAGE SECTION */
-.not-average-section{
-    margin-block-start: var(--spacing-800);
-    width: 100%;
-    max-width: 21.44rem;    
-}
-.not-average-heading{
-    font-family: var(--font-family-martian-mono);
-    font-weight: var(--font-weight-semiBold);
-    line-height: 1.3;
-    letter-spacing: -0.13rem;
-    color: var(--neutral-900);
-    font-size: 2.13rem;   
-}
 .highlight{ 
     position: relative; 
     display: inline-block; 
@@ -282,12 +348,7 @@ body {
     z-index: -1;
 }
 .not-average-description{
-    margin-block-start: var(--spacing-300);
-    font-weight: var(--font-weight-semiBold);
-    font-size: var(--font-size-20);
-    line-height: 1.4;
-    letter-spacing: -0.03rem;
-    color: var(--neutral-700);
+    font-weight: var(--font-weight-600);
 }
 .not-average-image-section{
     display: block;
@@ -300,41 +361,16 @@ body {
 
 /* READING JOURNEY SECTION */
 .reading-journey-section{
-    margin-block-start: var(--spacing-800);
-    width: 100%;
-    max-width: 21.44rem;    
-    background-image:
-        url("../images/pattern-glow.svg"),
-        url("../images/pattern-light-bg.svg");
-    background-repeat: no-repeat;
     background-position:
         left 0rem top 5rem,
         center;
-    background-size:
-        auto,
-        cover;
-    background-color: var(--neutral-100);
     padding-inline: var(--spacing-200);
     border-radius: 0.75rem;
 }
-.reading-heading{
-    margin-block-start: var(--spacing-800);
-    font-family : var(--font-family-martian-mono);
-    font-weight: var(--font-weight-semiBold);
-    font-size: 2.13rem;
-    line-height: 1.3;
-    letter-spacing: -0.13rem;
-    color: var(--neutral-900);
-}
 .steps-container{
     list-style-type: none;
-    margin-block-start: var(--spacing-400);
-    font-family : var(--font-family-martian-mono);
-    font-weight: var(--font-weight-semiBold);
     font-size: var(--font-size-16);
-    line-height: 1.3;
-    letter-spacing: -0.06em;
-    color: var(--neutral-900);
+    letter-spacing: -0.06rem;
 }
 .number-list{
     margin-block-end: var(--spacing-400);
@@ -353,21 +389,6 @@ body {
 }
 
 /* MEMBERSHIP OPTIONS SECTION */
-.membership-section{    
-    width: 100%;
-    max-width: 21.44rem;
-}
-.membership-container{
-    margin-block-start: var(--spacing-800);
-}
-.membership-title{
-    color: var(--neutral-900);
-    font-size: 2.13rem;
-    font-weight: var(--font-weight-semiBold);
-    font-family: var(--font-family-martian-mono);
-    line-height: 1.3;
-    letter-spacing: -0.13rem;
-}
 .option-card,
 .last-option-card{
     width: 100%;
@@ -379,109 +400,58 @@ body {
 .option-card{
     margin-block: var(--spacing-300) var(--spacing-400);
 }
-.last-option-card{
-    margin-block-start: var(--spacing-300);
-}
 .card-title{
     font-size: 1.5rem;
     line-height: 1.1;
-    letter-spacing: -0.06rem;
-    font-weight: var(--font-weight-semiBold);
-    font-family: var(--font-family-martian-mono);
-    color: var(--neutral-900);
-}
-.price-container,
-.custom{
-    margin-block-start: var(--spacing-300);
-    font-size: 2.13rem;
-    font-weight: var(--font-weight-semiBold);
-    font-family: var(--font-family-martian-mono);
-    line-height: 1.3;
-    letter-spacing: -0.06rem;
-    color: var(--neutral-900);    
 }
 .price-container{
-    display: flex;
-    flex-direction: row;
     align-items: center;
     column-gap: 0.5rem;
 }
 .per-month{
-    color: var(--neutral-700);
-    line-height: 1.4;
-    font-size: var(--font-size-20);
-    letter-spacing: -0.03rem;
     font-weight: normal;
 }
 .divider{
-    margin-block-start: var(--spacing-300);
     width: 18.25rem;
     border :none;
     border-top: 1px solid var(--neutral-200);
 }
-.feature-container{
-    margin-block-start: var(--spacing-300);
-}
 .feature-item{
-    display: flex;
-    flex-direction: row;
     gap: 0.75rem;
 }
 .feature-check-img{
     width: 1.5rem;
     height: 1.5rem;
 }
-.feature-text{
-    font-size: var(--font-size-20);
-    line-height: 1.4;
-    letter-spacing: -0.03rem;
-    color: var(--neutral-700);
-}
 .item-gap{
     margin-block-start: var(--spacing-200);
 }
 .subscribe-now-button{
     display: block;
-    margin-block-start: var(--spacing-300);
     text-decoration: none;
     width: 18.25rem;
     border: 2px solid var(--neutral-900);
-    padding: var(--spacing-250) var(--spacing-300);
+    padding: var(--spacing-300) var(--spacing-250) ;
     border-radius: 0.5rem;
     background-color: var(--light-salmon-50);
-    font-family: var(--font-famiy-martian-mono);
-    font-weight: var(--font-weight-semiBold);
     font-size: var(--font-size-16);
     text-transform: uppercase;
-    line-height: 1.3;
-    letter-spacing: -0.06;
-    color: var(--neutral-900);
     text-align: center;
+    color: var(--neutral-900);
 }
 .pro-card{
-    background-image:
-        url("../images/pattern-glow.svg"),
-        url("../images/pattern-light-bg.svg");
-    background-repeat: no-repeat;
     background-position:
         left -5rem top -8rem,
         center;
-    background-size:
-        auto,
-        cover;
-    background-color: var(--neutral-100);
 }
 
 /* TESTIMONIAL QUOTE SECTION */
 .testimonial-container{
-    margin-block-start: var(--spacing-800);
     width: 100%;
     max-width: 23.44rem;
     padding-inline: var(--spacing-200);
 }
 .star-block{
-    display: flex;
-    flex-direction: row;
     row-gap: 0.38rem;
 }
 .star-img{
@@ -489,26 +459,13 @@ body {
     height: 1.75rem;    
 }
 .testimonial-quote{
-    margin-block-start: var(--spacing-400);
     font-size: 1.5rem;
-    font-family: var(--font-family-martian-mono);
-    font-weight: var(--font-weight-semiBold);
     line-height: 1.1;
-    letter-spacing: -0.06rem;
-    color: var(--neutral-900);
-}
-.author{
-    margin-block-start: var(--spacing-400);
-    font-size: var(--font-size-20);
-    line-height: 1.4;
-    letter-spacing: -0.03rem;
-    color: var(--neutral-700);
 }
 
 
 /* FOOTER */
 .footer-container{
-    margin-block-start: var(--spacing-800);
     background-color: var(--neutral-900);
     padding: 3rem var(--spacing-200) 0 var(--spacing-200);
     border-radius: 1rem 1rem 0 0;
@@ -517,29 +474,12 @@ body {
 }
 .footer-heading{
     color: var(--neutral-100);
-    font-size: 2.13rem;
-    font-family: var(--font-family-martian-mono);
-    font-weight: var(--font-weight-semiBold);
-    line-height: 1.3;
-    letter-spacing: -0.13rem;
     text-align: center;
 }
 .review-button{
     margin-block-start: var(--spacing-500);
-    text-decoration: none;
     border: 2px solid var(--neutral-100);
     border-radius: 0.5rem;
-    padding: var(--spacing-300) var(--spacing-250);    
-    gap: var(--spacing-200);
-    width: 100%;
-    max-width: 21.44rem;
-    display: inline-flex;
-    align-items: center;
-    text-transform: uppercase;
-    font-family: var(--font-family-martian-mono);
-    font-weight: var(--font-weight-semiBold);
-    line-height: 1.3;
-    letter-spacing: -0.06rem;
     font-size: var(--font-size-16);
     color: var(--neutral-0);
 }
@@ -548,22 +488,16 @@ body {
     height: 1.5rem;
 }
 .footer-content{
-    margin-block-start: var(--spacing-800);
     padding: var(--spacing-600) var(--spacing-200) 0 var(--spacing-200);
     color: var(--neutral-0);
     border-top: 1px solid var(--neutral-700);
     text-align: center;
 }
 .footer-text{
-    font-family: var(--font-famiy-martian-mono);
-    font-size: 0.88rem;
-    line-height: 1.2;
-    letter-spacing: -0.03rem;
+    font-family: var(--font-family-martian-mono);
 }
 .social-media-container{
     margin-block: var(--spacing-200) var(--spacing-300);
-    display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
     gap: var(--spacing-300);
