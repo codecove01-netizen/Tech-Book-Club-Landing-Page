@@ -514,7 +514,6 @@ body {
                 TABLET STYLE
 ======================================================= */
 @media screen and (min-width: 48rem) {
-
     /* ===================================================
                 TYPOGRAPHY
     ======================================================= */
@@ -523,12 +522,27 @@ body {
     .hero-description{
         margin-block-start: var(--spacing-300);
     }
+    /* Spacing 1000 */
+    .read-section,.not-average-section{
+        margin-block-start: var(--spacing-1000);
+    }
 
-     /* ===================================================
+    /* ===================================================
                     SHARED LAYOUT
     =================================================== */
 
     /* ----------- Shared Widths ----------- */
+
+    .hero-container,.read-section,.not-average-section{
+        width: 100%;
+        max-width: 44rem;
+    }
+
+    /* ----------- Flex Layout ------------ */
+    .read-heading{
+        display: flex;
+        flex-direction: column;
+    }
 
     /* ===================================================
                     MAIN CONTAINER
@@ -536,7 +550,6 @@ body {
     .container{
         width: 100%;
         max-width: 48rem;
-        border: 1px solid black;
         margin-inline: auto;
     }
 
@@ -546,7 +559,6 @@ body {
     }
     .hero-container{
         margin-block-start: var(--spacing-800);
-        border: 1px solid black;
         width: 100%;
         max-width: 44rem;
     }
@@ -578,5 +590,31 @@ body {
         max-width: 44rem;
     }
 
+    /* READ SECTION */
+    .read-section{
+        padding-inline: 0;   
+    }
+    .read-heading{
+        font-size: 3.13rem;
+    }
+    .feature-list{
+        margin-block-start: 2.13rem;
+    }
+    .list-item{
+        margin-block-end: var(--spacing-300);
+    }
+    .read-together-img{
+        border-radius: 1.57rem;
+    }
 
+    /* NOT AVERAGE SECTION */
+    .not-average-heading{
+        width: 100%;
+        max-width: 33.38rem;
+         font-size: 3.13rem;
+    }
+    .not-average-img{
+        border-radius: 1.57rem;
+        max-width: 44rem;
+    }
 }
