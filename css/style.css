@@ -509,3 +509,74 @@ body {
     width: 1.38rem;
     height: 1.38rem;
 }
+
+/* ===================================================
+                TABLET STYLE
+======================================================= */
+@media screen and (min-width: 48rem) {
+
+    /* ===================================================
+                TYPOGRAPHY
+    ======================================================= */
+
+    /* Spacing 300 */
+    .hero-description{
+        margin-block-start: var(--spacing-300);
+    }
+
+     /* ===================================================
+                    SHARED LAYOUT
+    =================================================== */
+
+    /* ----------- Shared Widths ----------- */
+
+    /* ===================================================
+                    MAIN CONTAINER
+    ======================================================= */
+    .container{
+        width: 100%;
+        max-width: 48rem;
+        border: 1px solid black;
+        margin-inline: auto;
+    }
+
+    /* HERO SECTION */
+    .hero-section{
+        padding-inline: var(--spacing-400);    
+    }
+    .hero-container{
+        margin-block-start: var(--spacing-800);
+        border: 1px solid black;
+        width: 100%;
+        max-width: 44rem;
+    }
+    .hero-heading{
+        font-size: 3.88rem;
+    }
+    .review-button,
+    .review-btn{
+        width: 100%;
+        max-width: 23.75rem;
+        font-size: 1.13rem;
+    }
+    .review-btn{    
+        border:2px solid var(--neutral-900);      
+    }
+    .testimonial-section{
+        width: 100%;
+        max-width: 25.63rem;
+    }
+    .profile-images{
+        min-width: 6.88rem;
+    }
+    .rating-container{   
+        max-width: 18.13rem;
+    }
+    .hero-image{
+        border-radius: 0.65rem;
+        width: 100%;
+        max-width: 44rem;
+    }
+
+
+}
