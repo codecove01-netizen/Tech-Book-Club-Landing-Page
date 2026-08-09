@@ -59,9 +59,9 @@ img {
     --linear-gradient-hover: linear-gradient(90deg, var(--light-salmon-100) 0%, var(--light-salmon-50) 100%);
 
     /* FONT WEIGHTS */
+    --font-weight-400: 400;
     --font-weight-700: 700;
     --font-weight-600: 600;
-
 }
 
 /* ===================================================
@@ -126,8 +126,8 @@ img {
 }
 
 
-/* ===================================================
-   SHARED LAYOUT
+/* ===============================================
+             SHARED LAYOUT
 =================================================== */
 
 /* ----------- Shared Widths ----------- */
@@ -280,9 +280,8 @@ body {
     max-width: 7.5rem;          
 }
 .star-icon{
-    width: 100%;
-    max-width: 1.5rem;
-    max-height: 1.5rem;  
+    width: 1.5rem;
+    height: 1.5rem;  
     display: inline-block;
 }
 .testimonial-numbers,
@@ -408,7 +407,7 @@ body {
     color: var(--neutral-700);
 }
 .per-month{
-    font-weight: 400;
+    font-weight: var(--font-weight-400);
 }
 .divider{
     width: 18.25rem;
@@ -480,7 +479,6 @@ body {
 }
 .footer-heading{
     color: var(--neutral-100);
-    text-align: center;
 }
 .review-button{
     margin-block-start: var(--spacing-500);
@@ -520,11 +518,6 @@ body {
                 TABLET STYLE
 ======================================================= */
 @media screen and (min-width: 48rem) {
-    /* ===================================================
-                TYPOGRAPHY
-    ======================================================= */
-
-
 
     /* ===================================================
                     SHARED LAYOUT
@@ -533,25 +526,16 @@ body {
     /* ----------- Shared Widths ----------- */
 
     .hero-container,.read-section,.not-average-section,
-    .reading-journey-section,.membership-section{
+    .reading-journey-section,.membership-section,
+    .testimonial-container{
         width: 100%;
         max-width: 44rem;
-    }
-
-    /* ----------- Flex Layout ------------ */
-    .read-heading{
-        display: flex;
-        flex-direction: column;
-    }
-
-        /* Spacing 300 */
-    .hero-description{
-        margin-block-start: var(--spacing-300);
-    }
-        /* Spacing 1000 */
+    }   
+            /* Spacing 1000 */
     .read-section,.not-average-section,
-    .reading-journey-section,.read-heading,
-    .membership-container{
+    .reading-journey-section,
+    .membership-container,.testimonial-container,
+    .footer-container{
         margin-block-start: var(--spacing-1000);
     }
 
@@ -570,11 +554,12 @@ body {
     }
     .hero-container{
         margin-block-start: var(--spacing-800);
-        width: 100%;
-        max-width: 44rem;
     }
     .hero-heading{
         font-size: 3.88rem;
+    }
+    .hero-description{
+        margin-block-start: var(--spacing-300);
     }
     .review-button,
     .review-btn{
@@ -607,6 +592,8 @@ body {
     }
     .read-heading{
         font-size: 3.13rem;
+        display: flex;
+        flex-direction: column;
     }
     .feature-list{
         margin-block-start: 2.13rem;
@@ -622,7 +609,7 @@ body {
     .not-average-heading{
         width: 100%;
         max-width: 33.38rem;
-         font-size: 3.13rem;
+        font-size: 3.13rem;
     }
     .not-average-img{
         border-radius: 1.57rem;
@@ -632,7 +619,6 @@ body {
     /* READING JOURNEY SECTION */
     .reading-journey-section{
         padding-inline: var(--spacing-400);
-        border: 1px solid black;
     }
     .reading-heading{
         font-size: 3.13rem;
@@ -675,10 +661,48 @@ body {
         grid-area: option-card;        
     }
     .per-month{
-        font-weight: normal;
+        font-weight: var(--font-weight-400);
         color: var(--neutral-700);
     }
     .pro-card{
         grid-area: pro-card;
+    }
+
+    /* TESTIMONIAL QUOTE SECTION */
+    .testimonial-container{
+        padding-inline: 0;
+    }
+    .testimonial-quote{
+        font-size: 2.13rem;
+        line-height: 1.3;
+    }
+
+    /* FOOTER */
+    .footer-container{
+        padding: var(--spacing-800) var(--spacing-400) 0 var(--spacing-400);
+        width: 100%;
+        max-width: 48rem;
+        text-align: center;
+    }
+    .footer-heading{
+        font-size: 3.13rem;
+    }
+    .footer-testimonial-section{
+        margin-inline: auto;
+    }
+    .star-container{
+        max-width: 9.25rem;
+    }
+    .star-icon1{
+        width: 1.75rem;
+        height: 1.75rem;
+    }
+    .footer-content{
+        padding: var(--spacing-300) var(--spacing-400);
+        display: flex;
+        justify-content: space-between;  
+    }
+    .social-media-container{
+        margin-block: 0;
     }
 }
