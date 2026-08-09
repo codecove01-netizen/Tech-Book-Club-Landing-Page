@@ -95,9 +95,7 @@ img {
 
 /* Pricing */
 .price-container, .custom{
-    letter-spacing: -0.06rem;
-    font-family: var(--font-family-martian-mono);
-    font-weight: var(--font-weight-600);
+    letter-spacing: -0.06rem;       
     line-height: 1.3;
 	font-size: 2.13rem;
 }
@@ -407,9 +405,10 @@ body {
 .price-container{
     align-items: center;
     column-gap: 0.5rem;
+    color: var(--neutral-700);
 }
 .per-month{
-    font-weight: normal;
+    font-weight: 400;
 }
 .divider{
     width: 18.25rem;
@@ -443,6 +442,13 @@ body {
     background-position:
         left -5rem top -8rem,
         center;
+}
+.custom,.price{
+    font-weight: var(--font-weight-600);
+    font-family: var(--font-family-martian-mono); 
+}
+.price{
+    color: var(--neutral-900);
 }
 
 /* TESTIMONIAL QUOTE SECTION */
@@ -518,14 +524,7 @@ body {
                 TYPOGRAPHY
     ======================================================= */
 
-    /* Spacing 300 */
-    .hero-description{
-        margin-block-start: var(--spacing-300);
-    }
-    /* Spacing 1000 */
-    .read-section,.not-average-section{
-        margin-block-start: var(--spacing-1000);
-    }
+
 
     /* ===================================================
                     SHARED LAYOUT
@@ -533,7 +532,8 @@ body {
 
     /* ----------- Shared Widths ----------- */
 
-    .hero-container,.read-section,.not-average-section{
+    .hero-container,.read-section,.not-average-section,
+    .reading-journey-section,.membership-section{
         width: 100%;
         max-width: 44rem;
     }
@@ -542,6 +542,17 @@ body {
     .read-heading{
         display: flex;
         flex-direction: column;
+    }
+
+        /* Spacing 300 */
+    .hero-description{
+        margin-block-start: var(--spacing-300);
+    }
+        /* Spacing 1000 */
+    .read-section,.not-average-section,
+    .reading-journey-section,.read-heading,
+    .membership-container{
+        margin-block-start: var(--spacing-1000);
     }
 
     /* ===================================================
@@ -616,5 +627,58 @@ body {
     .not-average-img{
         border-radius: 1.57rem;
         max-width: 44rem;
+    }
+
+    /* READING JOURNEY SECTION */
+    .reading-journey-section{
+        padding-inline: var(--spacing-400);
+        border: 1px solid black;
+    }
+    .reading-heading{
+        font-size: 3.13rem;
+    }
+    .steps-container{
+        font-size: 1.13rem;
+        margin-block-start: var(--spacing-600);
+    }
+    .number-list{
+        margin-block-end: var(--spacing-500);
+    }
+    .number-item{
+        width: 2.5rem;
+        height: 2.5rem;
+        margin-block-end: var(--spacing-300);
+    }
+    .number-list-last{
+        margin-block-end: var(--spacing-1000);
+    }
+
+    /* MEMBERSHIP OPTIONS SECTION */    
+    .membership-title{
+        font-size: 3.13rem;
+        margin-block-end: var(--spacing-500);
+    }   
+    .option-grid{
+        display:grid;
+        grid-template-areas: 
+             'option-card pro-card'
+             'last-option-card .';
+        gap: var(--spacing-300);
+        margin-block-start: var(--spacing-400);
+    }     
+    .last-option-card{
+        grid-area: last-option-card;
+        margin-block-start: 0;
+    }
+    .option-card{
+        margin-block: 0;
+        grid-area: option-card;        
+    }
+    .per-month{
+        font-weight: normal;
+        color: var(--neutral-700);
+    }
+    .pro-card{
+        grid-area: pro-card;
     }
 }
