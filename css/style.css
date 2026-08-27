@@ -840,6 +840,8 @@ body {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        background-position:
+            left 40rem top 0rem;
     }
     .reading-heading{
         padding-block-start: var(--spacing-1000);
