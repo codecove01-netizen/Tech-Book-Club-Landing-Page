@@ -35,6 +35,7 @@ img {
     --spacing-600: 3rem;     /* 48px */
     --spacing-800: 4rem;     /* 64px */
     --spacing-1000: 5rem;    /* 80px */
+    --spacing-1200: 7.5rem;  /* 120px */
 
     /* FONT FAMILIES */
     --font-famiy-inter: 'Inter', sans-serif;
@@ -580,9 +581,11 @@ body {
     .rating-container{   
         max-width: 18.13rem;
     }
+    .hero-image-section{
+        display: block;
+    }
     .hero-image{
         border-radius: 0.65rem;
-        width: 100%;
         max-width: 44rem;
     }
 
@@ -705,4 +708,79 @@ body {
     .social-media-container{
         margin-block: 0;
     }
+}
+
+/* ===================================================
+                DESKTOP STYLE
+======================================================= */
+@media screen and (min-width: 75rem) {
+
+    /* ===================================================
+                    SHARED LAYOUT
+    =================================================== */
+
+    .container,.hero-container,.read-section,.not-average-section,
+    .reading-journey-section,.membership-section,
+    .testimonial-container{
+          max-width: none;
+    } 
+
+    .hero-section,.read-section{
+        padding-inline: 8.44rem;
+    }
+            /* Spacing 1200 */
+    .read-section,.not-average-section{
+        margin-block-start: var(--spacing-1200);
+    }
+
+    /* ===================================================
+                    MAIN CONTAINER
+    ======================================================= */
+
+     /* HERO SECTION */     
+    .hero-section{
+        padding-block: var(--spacing-400) var(--spacing-1000);
+        background-position:
+            left 60rem top 20rem,
+            center;   
+    }  
+    .hero-grid{
+        display: grid;
+        grid-template-columns: 35.63rem 33.75rem;
+        gap: var(--spacing-800);
+        align-items: center;         
+    } 
+    .hero-image{
+        width: 33.75rem;
+        height: 37.88rem;
+    }
+
+    /* READ SECTION */
+    .read-section{
+        display: flex;
+        justify-content: center;
+    }
+   .read-grid {
+        display: grid;
+        grid-template-columns: 35rem 33.13rem;
+        grid-template-areas: 
+        'read-image read-list';
+        align-items: center;
+        gap: var(--spacing-1000);
+    }
+    .read-list-container{
+        grid-area: read-list;
+    }
+    .read-image-section{
+        grid-area: read-image;
+        margin-block-start: 0;
+    }
+    .read-together-img {
+        width: 35rem;
+        height: 32.5rem;
+    }
+    .feature-list{
+        width: 26.94rem;
+    }
+
 }
