@@ -722,10 +722,10 @@ body {
     .container,.hero-container,.read-section,.not-average-section,
     .reading-journey-section,.membership-section,
     .testimonial-container{
-          max-width: none;
+          max-width: 100%;
     } 
 
-    .hero-section,.read-section{
+    .hero-section,.read-section,.not-average-section{
         padding-inline: 8.44rem;
     }
             /* Spacing 1200 */
@@ -743,12 +743,19 @@ body {
         background-position:
             left 60rem top 20rem,
             center;   
-    }  
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;   
+    } 
+    .logo{
+        width: 73.13rem;
+    }
     .hero-grid{
         display: grid;
         grid-template-columns: 35.63rem 33.75rem;
         gap: var(--spacing-800);
-        align-items: center;         
+        align-items: center;      
     } 
     .hero-image{
         width: 33.75rem;
@@ -783,4 +790,46 @@ body {
         width: 26.94rem;
     }
 
+    /* NOT AVERAGE SECTION */
+    .not-average-section{
+        display: flex;
+        justify-content: center;
+    }
+    .not-average-grid{
+        display: grid;
+        grid-template-columns: 33.13rem 35rem;
+        grid-template-areas: 
+        'not-average-container not-average-image';
+        gap: var(--spacing-1000);
+        align-items: center;
+        height: 32.5rem;
+    }
+    .not-average-container{
+        grid-area: not-average-container ;
+    }
+    .not-average-description{
+        font-weight: var(--font-weight-400);
+    }
+    .not-average-description span{
+        font-weight: var(--font-weight-700);
+    }
+    .not-average-image-section{
+        margin-block-start: 0;
+        grid-area: not-average-image;
+    }
+    .not-average-img{
+        width: 35rem;
+        height: 32.5rem;
+    }
+    .technology-logo-container{
+        position: relative;
+        display: inline-block;
+        z-index: 1;     
+    }
+    .tech-logos-img{
+        position: absolute;
+        z-index: -1;
+        left: 33.13rem;
+        bottom: 7.19rem;
+    }
 }
