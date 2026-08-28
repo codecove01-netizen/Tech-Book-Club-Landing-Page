@@ -731,7 +731,7 @@ body {
     }
             /* Spacing 1200 */
     .read-section,.not-average-section,.reading-journey-section,
-    .membership-section{
+    .membership-section,.testimonial-container{
         margin-block-start: var(--spacing-1200);
     }
 
@@ -910,4 +910,16 @@ body {
     .divider-desktop{
         width: 18.88rem;
     }
+
+    /* TESTIMONIAL QUOTE SECTION */
+    .testimonial-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 60.63rem;
+    }
+    .testimonial-quote{
+        text-align: center;
+    } 
 }
