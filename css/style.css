@@ -721,7 +721,7 @@ body {
 
     .container,.hero-container,.read-section,.not-average-section,
     .reading-journey-section,.membership-section,
-    .testimonial-container{
+    .testimonial-container,.footer-container{
           max-width: 100%;
     } 
 
@@ -731,7 +731,7 @@ body {
     }
             /* Spacing 1200 */
     .read-section,.not-average-section,.reading-journey-section,
-    .membership-section,.testimonial-container{
+    .membership-section,.testimonial-container,.footer-container{
         margin-block-start: var(--spacing-1200);
     }
 
@@ -922,4 +922,23 @@ body {
     .testimonial-quote{
         text-align: center;
     } 
+
+    /* FOOTER */
+    .footer-container{
+        padding: var(--spacing-1000) 8.44rem 0 8.44rem;
+        max-width: 100%;        
+    }
+    .footer-details-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .footer-details{
+        width: 47.06rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 }
