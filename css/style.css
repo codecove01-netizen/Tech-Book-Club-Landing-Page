@@ -120,7 +120,7 @@ img {
 }
 
 /* Buttons */
-.review-btn, .subscribe-now-button, .review-button{
+.review-btn, .subscribe-now-button, .review-button,.talk-to-us-button{
 	letter-spacing: -0.06rem;
     line-height: 1.3;
     font-family: var(--font-family-martian-mono);
@@ -174,7 +174,7 @@ img {
 .footer-testimonial-section, .feature-list,
 .not-average-description, .last-option-card, .price-container,
 .custom, .divider, .feature-container,
-.subscribe-now-button
+.subscribe-now-button,.talk-to-us-button
 {
     margin-block-start: var(--spacing-300);
 }
@@ -433,7 +433,7 @@ body {
 .item-gap{
     margin-block-start: var(--spacing-200);
 }
-.subscribe-now-button{
+.subscribe-now-button,.talk-to-us-button{
     display: block;
     text-decoration: none;
     width: 18.25rem;
@@ -447,7 +447,8 @@ body {
     color: var(--neutral-900);
 }
 .subscribe-now-button:hover,.subscribe-now-button:focus-visible,
-.review-btn:hover,.review-btn:focus-visible
+.review-btn:hover,.review-btn:focus-visible,
+talk-to-us-button:hover,.talk-to-us-button:focus-visible
 {
     background: var(--linear-gradient-hover);
 }
@@ -533,6 +534,35 @@ body {
 .social-icon{
     width: 1.38rem;
     height: 1.38rem;
+}
+
+/* Success Message */
+.toast {
+    position: fixed;
+    inset-block-end: 2rem;
+    inset-inline-start: 50%;
+    transform: translateX(-50%) translateY(100px);
+
+    padding: 1rem 1.5rem;
+    border-radius: 0.5rem;
+
+    background: var(--light-salmon-100);
+    color: var(--neutral-900);
+
+    opacity: 0;
+    visibility: hidden;
+    transition:
+        opacity 0.3s ease,
+        transform 0.3s ease,
+        visibility 0.3s ease;
+
+    z-index: 1000;
+}
+
+.toast.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
 }
 
 /* ===================================================
@@ -913,7 +943,7 @@ body {
         grid-template-columns: 17.88rem 21.88rem 17.88rem;
         margin-block-start: var(--spacing-800);
     }  
-    .subscribe-now-button{
+    .subscribe-now-button,.talk-to-us-button{
         width: 14.88rem;
         font-size: 1.13rem;
     }    
