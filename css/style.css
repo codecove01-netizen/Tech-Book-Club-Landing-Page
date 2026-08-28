@@ -725,11 +725,13 @@ body {
           max-width: 100%;
     } 
 
-    .hero-section,.read-section,.not-average-section,.reading-journey-section{
+    .hero-section,.read-section,.not-average-section,
+    .reading-journey-section,.membership-section{
         padding-inline: 8.44rem;
     }
             /* Spacing 1200 */
-    .read-section,.not-average-section,.reading-journey-section{
+    .read-section,.not-average-section,.reading-journey-section,
+    .membership-section{
         margin-block-start: var(--spacing-1200);
     }
 
@@ -865,5 +867,47 @@ body {
         z-index: -1;
         bottom: 7.38rem;
         left: 9.06rem;
+    }
+
+    /* MEMBERSHIP OPTIONS SECTION */
+     .membership-section{
+        display: flex;
+        justify-content: center;
+     }
+     .membership-container{
+        width: 60.63rem;
+        height: 32.44rem;
+        margin-block-start: 0;
+    }  
+     .membership-title{
+        margin-block-end: var(--spacing-800);
+        text-align: center;
+     }
+     .option-grid{
+        grid-template-areas: 
+            'option-card pro-card last-option-card';
+        grid-template-columns: 17.88rem 21.88rem 17.88rem;
+        margin-block-start: var(--spacing-800);
+    }  
+    .subscribe-now-button{
+        width: 14.88rem;
+        font-size: 1.13rem;
+    }    
+    .subscribe-button-desktop{
+        width: 18.88rem;
+    }
+    .option-card,.last-option-card{
+        height: 22.38rem;
+    }
+    .pro-card{
+        height: 24.38rem;
+        min-width: 21.88rem;
+        padding: var(--spacing-500) var(--spacing-300);
+    }
+    .divider{
+        width: 14.88rem;
+    }
+    .divider-desktop{
+        width: 18.88rem;
     }
 }
