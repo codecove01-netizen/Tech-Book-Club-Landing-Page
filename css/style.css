@@ -58,6 +58,7 @@ img {
     --light-salmon-500: #FEA36F; 
     --linear-gradient: linear-gradient(90deg, var(--light-salmon-500) 0%, var(--neutral-500) 71%, var(--neutral-900) 100%);
     --linear-gradient-hover: linear-gradient(90deg, var(--light-salmon-100) 0%, var(--light-salmon-50) 100%);
+    --linear-gradient-footer-hover: linear-gradient(90deg, var(--neutral-700) 0%, var(--neutral-900) 100%);
 
     /* FONT WEIGHTS */
     --font-weight-400: 400;
@@ -300,6 +301,7 @@ body {
 .hero-image{
     border-radius: 0.32rem;
     max-width: 21.44rem;
+    margin-block-start: var(--spacing-800);
 }
 
 /* READ SECTION */
@@ -444,6 +446,11 @@ body {
     text-align: center;
     color: var(--neutral-900);
 }
+.subscribe-now-button:hover,.subscribe-now-button:focus-visible,
+.review-btn:hover,.review-btn:focus-visible
+{
+    background: var(--linear-gradient-hover);
+}
 .pro-card{
     background-position:
         left -5rem top -8rem,
@@ -494,6 +501,10 @@ body {
     font-size: var(--font-size-16);
     color: var(--neutral-0);
 }
+.review-button:hover,
+.review-button:focus-visible{
+    background: var(--linear-gradient-footer-hover);
+}
 .up-arrow-img{
     width: 1.5rem;
     height: 1.5rem;
@@ -515,6 +526,9 @@ body {
 }
 .social-links{
     text-decoration: none;
+}
+.social-links:hover,.social-links:focus-visible{
+    opacity: 60%;
 }
 .social-icon{
     width: 1.38rem;
