@@ -448,7 +448,7 @@ body {
 }
 .subscribe-now-button:hover,.subscribe-now-button:focus-visible,
 .review-btn:hover,.review-btn:focus-visible,
-talk-to-us-button:hover,.talk-to-us-button:focus-visible
+.talk-to-us-button:hover,.talk-to-us-button:focus-visible
 {
     background: var(--linear-gradient-hover);
 }
